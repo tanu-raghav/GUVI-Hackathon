@@ -112,9 +112,14 @@ java -cp .;lib/mysql-connector-j-9.3.0.jar com.eventmanagement.WelcomePageUI
 
 ## 📸 Screenshots
 
-* Welcome Screen
-* Registration Form
-* Success Popup
+**Welcome Screen:**
+![Welcome Screen](assets/welcome.png)
+
+**Registration Form:**
+![Registration Form](assets/register.png)
+
+**Login:**
+![Login](assets/login.png)
 
 ---
 
