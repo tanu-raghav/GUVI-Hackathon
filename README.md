@@ -116,8 +116,6 @@ java -cp .;lib/mysql-connector-j-9.3.0.jar com.eventmanagement.WelcomePageUI
 * Registration Form
 * Success Popup
 
-(Screenshots should be added to the `/assets` folder and linked here)
-
 ---
 
 ## 📌 Notes
