@@ -103,43 +103,30 @@ java -cp .;lib/mysql-connector-j-9.3.0.jar com.eventmanagement.WelcomePageUI
 
 ## 🧪 Features
 
- User Features:
-Register & login
+### User Features:
+* Register & login
+* Create event request (title, description, date, type)
+* View request status
 
-Create event request (title, description, date, type)
+### Admin Features:
+* Secure login
+* View all event requests
+* Approve or reject requests
+* View customer details
 
-View request status
+### Code Quality & Innovation
+* Follows MVC architecture
+* Centralized validation logic
+* User-friendly GUI (Swing-based)
+* Modular & reusable DAO structure
+* Error handling with user prompts
 
-🔐 Admin Features:
-Secure login
-
-View all event requests
-
-Approve or reject requests
-
-View customer details
-
-🧠 Code Quality & Innovation
-Follows MVC architecture
-
-Centralized validation logic
-
-User-friendly GUI (Swing-based)
-
-Modular & reusable DAO structure
-
-Error handling with user prompts
-
-🧪 Data Validation
-Implemented in ValidationUtils.java:
-
-Valid email
-
-Mobile number (10 digits)
-
-Empty field checks
-
-Date parsing
+### Data Validation
+* Implemented in ValidationUtils.java:
+* Valid email
+* Mobile number (10 digits)
+* Empty field checks
+* Date parsing
 
 
 
