@@ -93,4 +93,37 @@ public class RequestManager {
             DatabaseConnection.closeConnection(conn);
         }
     }
+    public List<SpecialRequest> getPendingRequests() {
+    List<SpecialRequest> pending = new ArrayList<>();
+    try (Connection conn = DatabaseConnection.getConnection()) {
+        String sql = "SELECT * FROM special_requests WHERE status = 'PENDING'";
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            SpecialRequest req = new SpecialRequest();
+            req.setId(rs.getInt("id"));
+            req.setEventId(rs.getInt("event_id"));
+            req.setUserId(rs.getInt("user_id"));
+            req.setMessage(rs.getString("message"));
+            req.setStatus(rs.getString("status"));
+            pending.add(req);
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return pending;
+}
+
+    public void updateRequestStatus(int requestId, String newStatus) {
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            String sql = "UPDATE special_requests SET status = ? WHERE id = ?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, newStatus);
+            stmt.setInt(2, requestId);
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
