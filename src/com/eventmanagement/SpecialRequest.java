@@ -26,6 +26,16 @@ public class SpecialRequest {
     public String getRequestDescription() {
         return requestDescription;
     }
+    private String status = "PENDING"; // New field
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 
     public void setRequestDescription(String requestDescription) {
         this.requestDescription = requestDescription;
