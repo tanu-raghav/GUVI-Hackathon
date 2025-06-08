@@ -95,6 +95,8 @@ public class AdminDashboardUI extends JFrame implements ActionListener {
             viewEventDetails();
         } else if (e.getSource() == refreshButton) {
             populateEventTable(); // Refresh the table data
+            eventTable.clearSelection();
+
         }
     }
 
